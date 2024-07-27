@@ -11,7 +11,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+blockquote {
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -30,4 +31,3 @@ img {
 img[src$=".jpg"] {
   border-radius: 4px;
 }
-
