@@ -1,9 +1,5 @@
 .bicicletas-bg {
-  background: linear-gradient(
-    to right,
-    var(--cor-0) 30%,
-    var(--cor-11) 30%
-  );
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 30%);
 }
 
 .bicicletas {
@@ -12,6 +8,7 @@
   gap: 40px;
   padding-top: 60px;
   padding-bottom: 60px;
+  background: url("../../img/dec/top-right.svg") no-repeat top 40px right 20px;
 }
 
 .bicicletas-imagem {

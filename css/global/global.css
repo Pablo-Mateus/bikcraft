@@ -17,6 +17,10 @@ blockquote, dd {
   list-style: none;
 }
 
+button {
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -24,6 +28,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
