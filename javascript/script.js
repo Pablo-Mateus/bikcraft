@@ -27,19 +27,34 @@ parametros.forEach(ativarProduto);
 
 const perguntas = document.querySelectorAll(".perguntas button");
 
-
-
 function expandirPergunta(event) {
   const item = event.currentTarget;
-  const controls = item.getAttribute('aria-controls')
-  const dd = document.getElementById(controls)
-  dd.classList.toggle('ativa')
-  const ativa = dd.classList.contains("ativa")
-  console.log(ativa)
-  item.setAttribute("aria-expanded", ativa)
+  const controls = item.getAttribute("aria-controls");
+  const dd = document.getElementById(controls);
+  dd.classList.toggle("ativa");
+  const ativa = dd.classList.contains("ativa");
+  console.log(ativa);
+  item.setAttribute("aria-expanded", ativa);
 }
 
 function foiClicado(item) {
   item.addEventListener("click", expandirPergunta);
 }
 perguntas.forEach(foiClicado);
+
+//galeria de bicicletas
+
+const galeria = document.querySelectorAll(".bicicleta-imagens img");
+const principal = document.querySelector("#principal");
+
+function mudarPrincipal(event) {
+  const img = event.currentTarget;
+  const url = img.src;
+  principal.src = url;
+}
+
+function cliqueImagem(imagem) {
+  imagem.addEventListener("click", mudarPrincipal);
+}
+console.log(principal);
+galeria.forEach(cliqueImagem);
