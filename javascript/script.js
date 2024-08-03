@@ -15,10 +15,31 @@ nav.forEach(ativarlink);
 
 const parametros = new URLSearchParams(location.search);
 function ativarProduto(parametro) {
-  console.log(parametro)
-  const elemento = document.getElementById(parametro)
-  if(elemento) {
-    elemento.checked = true
+  console.log(parametro);
+  const elemento = document.getElementById(parametro);
+  if (elemento) {
+    elemento.checked = true;
   }
 }
-parametros.forEach(ativarProduto)
+parametros.forEach(ativarProduto);
+
+//perguntas frequentes
+
+const perguntas = document.querySelectorAll(".perguntas button");
+
+
+
+function expandirPergunta(event) {
+  const item = event.currentTarget;
+  const controls = item.getAttribute('aria-controls')
+  const dd = document.getElementById(controls)
+  dd.classList.toggle('ativa')
+  const ativa = dd.classList.contains("ativa")
+  console.log(ativa)
+  item.setAttribute("aria-expanded", ativa)
+}
+
+function foiClicado(item) {
+  item.addEventListener("click", expandirPergunta);
+}
+perguntas.forEach(foiClicado);
