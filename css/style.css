@@ -1,3 +1,4 @@
+@import url("/css/utilidades/animacao.css");
 @import url("/css/global/header.css");
 @import url("/css/global/global.css");
 @import url("/css/home/introducao.css");
@@ -20,3 +21,4 @@
 @import url("/css/contato/lojas.css");
 @import url("/css/utilidades/formulario.css");
 @import url("/css/orcamento/orcamento.css");
+

@@ -45,16 +45,24 @@ perguntas.forEach(foiClicado);
 //galeria de bicicletas
 
 const galeria = document.querySelectorAll(".bicicleta-imagens img");
-const principal = document.querySelector("#principal");
+const principal = document.querySelector(".bicicleta-imagens");
 
 function mudarPrincipal(event) {
   const img = event.currentTarget;
-  const url = img.src;
-  principal.src = url;
+  const tela = matchMedia("(min-width:1000px)").matches;
+  if (tela) {
+    principal.prepend(img);
+  }
 }
 
 function cliqueImagem(imagem) {
   imagem.addEventListener("click", mudarPrincipal);
 }
-console.log(principal);
+
 galeria.forEach(cliqueImagem);
+
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
+
+

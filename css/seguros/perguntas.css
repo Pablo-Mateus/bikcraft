@@ -49,11 +49,11 @@
 .perguntas button:hover::after, .perguntas button[aria-expanded="true"]::after{
   transform: rotate(180deg);
 }
-.perguntas dd.ativa {
+.js .perguntas dd.ativa {
   display: block;
 }
 
-.perguntas dd {
+.js .perguntas dd {
   padding-left: 20px;
   padding-top: 16px;
   max-width: 80ch;
